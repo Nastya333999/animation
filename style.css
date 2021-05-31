@@ -1,0 +1,170 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+button{
+    border: none;
+    background-color: transparent;
+}
+.animation{
+    width: 1300px;
+    height: 585px;
+    border-radius: 10px;
+    background-image: url(./img/space.jpg);
+    overflow: hidden !important;
+    position: relative;
+    margin: auto;
+}
+.space-img{
+    width: 845px;
+    margin: 0 auto;
+    position: absolute;
+    top: 70%;
+    left: 18%;
+    -webkit-animation: rotation 35s infinite linear;
+}
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+.big-play-button{
+    text-align: center;
+}
+.btn-play{
+    width: 80px;
+    height: 80px;
+    background-image: url(./img/play_btn.png) ;
+    background-size: 80px 80px;
+    cursor: pointer;
+    margin: 0 0 20px 0;
+}
+.speeds-btn{
+    display: flex;
+    margin: 0 0 40px 0;
+}
+.speed-animation{
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 0 7px;
+    padding-top: 5px;
+    text-align: center;
+}
+.speed-btn{
+    color: white;
+    height: 100%;
+    width: 100%;
+    font-weight: 900;
+    display: block;
+}
+.active{
+    transition: color .15s cubic-bezier(.3,.2,.5,.9); 
+    background-color: white;
+}
+.active-link{
+    color: black;
+}
+.animation-time{
+    color: white;
+    font-weight: 900;
+}
+
+.time{
+    text-align: center;
+}
+.button-container{
+    margin: 20% auto;
+    display:table;
+    /* display: none; */
+}
+.start{
+    position: sticky;
+    top: 50%;
+    left: 45%;
+    height: 50px;
+    width: 150px;
+    background-color:black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.txt-start{
+    color: yellow;
+    font-weight: bold;
+    margin: auto;
+}
+
+.txt-start:hover{
+    color: white;
+
+}
+.size {
+    color: white;
+    font-weight: bold;
+    font-size: 300px;
+    transition: 7s;
+}
+.astronaut-block{
+    position: absolute;
+    top: 45%;
+    left: 58%;
+}
+.astronaut{
+    position: absolute;
+    display: none;
+    height: 100px;
+}
+.astronaut-size{
+    position: relative;
+    display: block;
+    animation: moving 2s ease 0.00001s 1 normal forwards;
+    /* jump 1s forwards; */
+}
+@keyframes moving {
+		0% {
+				transform: scale(0.5) translateX(0);
+		}
+        60%{
+            transform: scale(2) translateX(30px);
+        }
+        70%{
+            transform: scale(1.5) translateX(45px);
+        }
+		100% {
+				transform: scale(2.5) translateX(60px);
+		}
+}
+
+/* @keyframes jump {
+    0% {
+        top: 0;
+    }
+    95% {
+        top: 80px;
+    }
+    96%{
+        top: 90px;
+    }
+    97%{
+        top: 80px;
+    }
+    98%{
+        top: 90px;
+    }
+    99%{
+        top: 80px;
+    }
+    100% {
+        top: 90px;
+    }
+} */
