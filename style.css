@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+button{
+    border: none;
+    background-color: transparent;
+}
+.animation{
+    width: 1300px;
+    height: 585px;
+    border-radius: 10px;
+    background-image: url(./img/space.jpg);
+    overflow: hidden !important;
+    position: relative;
+    margin: auto;
+}
+.space-img{
+    width: 845px;
+    margin: 0 auto;
+    position: absolute;
+    top: 70%;
+    left: 18%;
+    -webkit-animation: rotation 35s infinite linear;
+    animation-delay: 5s;
+}
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+.big-play-button{
+    text-align: center;
+}
+.btn-play{
+    width: 80px;
+    height: 80px;
+    background-image: url(./img/play_btn.png) ;
+    background-size: 80px 80px;
+    cursor: pointer;
+    margin: 0 0 20px 0;
+}
+.speeds-btn{
+    display: flex;
+    margin: 0 0 40px 0;
+}
+.speed-animation{
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 0 7px;
+    padding-top: 5px;
+    text-align: center;
+}
+.speed-btn{
+    color: white;
+    height: 100%;
+    width: 100%;
+    font-weight: 900;
+    display: block;
+}
+.active{
+    transition: color .15s cubic-bezier(.3,.2,.5,.9); 
+    background-color: white;
+}
+.active-link{
+    color: black;
+}
+.animation-time{
+    color: white;
+    font-weight: 900;
+}
+
+.time{
+    text-align: center;
+}
+.button-container{
+    margin: 20% auto;
+    display:table;
+}
+.start{
+    position: sticky;
+    top: 50%;
+    left: 45%;
+    height: 50px;
+    width: 150px;
+    background-color:black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.txt-start{
+    color: yellow;
+    font-weight: bold;
+    margin: auto;
+    -webkit-animation: color 2s infinite linear;
+}
+@-webkit-keyframes color {
+		from {
+			color: yellow;
+		}
+		to {
+            color: white;
+		}
+}
+.size {
+    color: white;
+    font-weight: bold;
+    font-size: 300px;
+    transition: 10s;
+}
+.astronaut-block{
+    position: absolute;
+    top: 45%;
+    left: 58%;
+}
+.astronaut{
+    position: absolute;
+    display: none;
+    height: 100px;
+}
+.astronaut-size{
+    position: relative;
+    display: block;
+    animation: moving 10s ease 0.00001s 1 normal forwards; 
+    /* animation-name: moving;
+    animation-duration: 10s;
+    animation-timing-function:  linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards; */
+}
+@keyframes moving {
+		0% {
+			transform: scale(0.5) translateX(0);
+		}
+        60%{
+            transform: scale(2) translateX(30px);
+        }
+        70%{
+            transform: scale(1.5) translateX(45px);
+        }
+        95%{
+            top: 0;
+        }
+		100% {
+			transform: scale(2.5) translateX(60px);
+		}
+}
